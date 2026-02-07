@@ -38,13 +38,15 @@ cd GitHub-user-activity
 
 ```Bash
 go mod tidy
-Compila el binario:
 ```
+
+3. Compila el binario:
 
 ```Bash
 go build -o github-activity
-Esto generará un ejecutable llamado github-activity (o github-activity.exe en Windows) en la raíz del proyecto.
 ```
+
+Esto generará un ejecutable llamado github-activity (o github-activity.exe en Windows) en la raíz del proyecto.
 
 💻 Uso
 Ejecuta la herramienta desde tu terminal pasando el nombre de usuario de GitHub como argumento.
