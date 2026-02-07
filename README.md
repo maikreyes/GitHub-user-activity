@@ -43,7 +43,7 @@ go mod tidy
 3. Compila el binario:
 
 ```Bash
-go build -o github-activity
+go build -o github-activity ./cmd/main.go
 ```
 
 Esto generará un ejecutable llamado github-activity (o github-activity.exe en Windows) en la raíz del proyecto.
