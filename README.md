@@ -28,6 +28,71 @@ Para compilar y ejecutar este proyecto necesitarás:
 ## 🛠️ Instalación y Compilación
 
 1. Clona el repositorio:
-   ```bash
-   git clone [https://github.com/maikreyes/GitHub-user-activity.git](https://github.com/maikreyes/GitHub-user-activity.git)
-   cd GitHub-user-activity
+
+```Bash
+git clone [https://github.com/maikreyes/GitHub-user-activity.git](https://github.com/maikreyes/GitHub-user-activity.git)
+cd GitHub-user-activity
+```
+
+2. Descarga las dependencias (si las hay) y verifica el módulo:
+
+```Bash
+go mod tidy
+Compila el binario:
+```
+
+```Bash
+go build -o github-activity
+Esto generará un ejecutable llamado github-activity (o github-activity.exe en Windows) en la raíz del proyecto.
+```
+
+💻 Uso
+Ejecuta la herramienta desde tu terminal pasando el nombre de usuario de GitHub como argumento.
+
+Sintaxis
+
+```Bash
+./github-activity <usuario>
+```
+
+Ejemplos
+
+Ver tu propia actividad:
+
+```Bash
+./github-activity maikreyes
+```
+
+Ver la actividad del creador de Linux:
+
+```Bash
+./github-activity torvalds
+```
+
+Salida Esperada:
+
+```Plaintext
+Output:
+- Fetching activity for GitHub user: maikreyes
+- Push Events: 9
+- Create Events: 3
+- Repositories: [maikreyes/expense-tracker maikreyes/GitHub-user-activity maikreyes/OpenGl-GraphicMotorTest maikreyes/go-vue-journey]
+```
+
+🤝 Contribuciones
+Las contribuciones son bienvenidas. Si deseas mejorar el código o añadir soporte para más eventos:
+
+Haz un Fork del proyecto.
+
+Crea una rama (git checkout -b feature/NuevaFuncionalidad).
+
+Haz Commit de tus cambios (git commit -m 'Agrega nueva funcionalidad').
+
+Haz Push a la rama (git push origin feature/NuevaFuncionalidad).
+
+Abre un Pull Request.
+
+📄 Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+Hecho por Maik Reyes
