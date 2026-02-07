@@ -5,3 +5,7 @@ import "github-user-activity/internal/domain"
 type GithubUserProvider interface {
 	FetchGithubActivity(username string) ([]domain.ApiResponse, error)
 }
+
+type GithubService interface {
+	FetchGithubActivity(username string) error
+}

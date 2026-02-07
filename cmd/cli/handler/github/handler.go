@@ -1,13 +1,15 @@
 package github
 
-import githubuser "github-user-activity/internal/provider/GithubUser"
+import (
+	"github-user-activity/internal/service/github"
+)
 
 type Handler struct {
-	Provider *githubuser.Provider
+	Service *github.Service
 }
 
-func NewHandler(provider *githubuser.Provider) *Handler {
+func NewHandler(service *github.Service) *Handler {
 	return &Handler{
-		Provider: provider,
+		Service: service,
 	}
 }

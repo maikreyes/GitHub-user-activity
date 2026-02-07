@@ -2,9 +2,10 @@ package cli
 
 import (
 	"flag"
-	"github-user-activity/cmd/cli/handler/github"
+	handler "github-user-activity/cmd/cli/handler/github"
 	githubuser "github-user-activity/internal/provider/GithubUser"
 	client "github-user-activity/internal/provider/GithubUser/Client"
+	service "github-user-activity/internal/service/github"
 )
 
 func Run() {
@@ -13,7 +14,8 @@ func Run() {
 
 	Providerclient := client.NewClient("https://api.github.com")
 	Provider := githubuser.NewProvider(Providerclient)
-	Handler := github.NewHandler(Provider)
+	service := service.NewService(Provider)
+	Handler := handler.NewHandler(service)
 
 	//Usage
 
